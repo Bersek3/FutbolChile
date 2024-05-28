@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta http-Equiv="Cache-Control" Content="no-cache, no-store, must-revalidate" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="https://futbollibre.pe/css/portadaybot.css" rel="stylesheet" type="text/css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <meta http-Equiv="Cache-Control" Content="no-cache" />
+    <meta http-Equiv="Pragma" Content="no-cache" />
+    <meta http-Equiv="Expires" Content="0" />
+    <meta name="robots" content="noindex,nofollow">
+    <style type="text/css" rel="stylesheet">
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 70px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 767px) {
+            header {
+                padding: 15px 20px;
+                /* Menos padding en dispositivos móviles */
+            }
+        }
+
+        .publicidad-mobile {
+            width: 100%;
+            /* Ajusta al ancho del contenedor padre */
+            height: 0;
+            /* Inicialmente no tiene altura */
+            padding-top: 18.25%;
+            /* Relación de aspecto de 16:9 */
+            position: relative;
+            /* Posicionamiento para la imagen interna */
+        }
+
+        .publicidad-mobile img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+        @media (min-width: 769px) {
+            .publicidad-mobile {
+                display: none;
+            }
+        }
+
+        .reproductor-container {
+
+            display: flex;
+            height: auto;
+        }
+
+        .reproductor {
+            background-color: #111827;
+            padding: .5rem;
+            width: 80%;
+            overflow: hidden;
+            margin-bottom: 10px;
+            height: fit-content
+        }
+
+        .new-container {
+            margin: 0 5vw;
+        }
+
+        .publicidad-derecha {
+            width: 20%;
+            max-width: 280px;
+            margin: 0 auto;
+            margin-left: 2rem;
+        }
+
+        .publicidad-derecha img {
+            width: inherit;
+        }
+
+        @media screen and (max-width: 769px) {
+            .publicidad-derecha {
+                display: none;
+            }
+
+            .reproductor {
+                width: 100%;
+            }
+        }
+
+        .tg-marca td,
+        .tg-marca th {
+            overflow: hidden;
+            word-break: normal
+        }
+
+        .tg-marca {
+            width: 70%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #aaa;
+            border-width: 0;
+            margin-bottom: 0
+        }
+
+        .tg-marca td {
+            text-align: center;
+            padding: 7px 2px;
+            color: #333;
+            background-color: #fff
+        }
+
+        .tg-marca th {
+            text-align: left;
+            font-weight: 400;
+            padding: 4px;
+            border-style: solid;
+            border-width: 0;
+            border-color: #aaa;
+            color: #fff;
+            background: #64a832
+        }
+
+        .tg-marca tr {
+            border: 1px solid #e8e8e8
+        }
+
+        .participant-name {
+            white-space: nowrap
+        }
+
+        .assist {
+            color: #B0B0B0
+        }
+
+        #goleslocal,
+        #golesvisitante {
+            font-size: 25px;
+            width: 16px
+        }
+
+        #escudolocal,
+        #escudovisitante {
+            min-width: 65px;
+            height: 55px
+        }
+
+        #torneot {
+            height: 17px
+        }
+
+        #tiempo {
+            min-width: 30px
+        }
+
+        #local,
+        #visitante {
+            width: 35%
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+        <style>
+        .boton-telegram {
+            background-color: #0088cc;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Suaviza la transición del cambio de color */
+        }
+
+        .boton-telegram:hover {
+            background-color: #0077b3; /* Color ligeramente más oscuro al pasar el mouse */
+        }
+    </style>  
+    
+    <script type="text/javascript">
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        id = getParameterByName('p');
+        if (getParameterByName('embed')) {
+            embed = getParameterByName('embed');
+        } else {
+            if (getParameterByName('r')) {
+                embed = getParameterByName('r');
+            } else {
+                embed = false;
+            }
+        }
+
+
+    </script>
+    
+    <script id="_waua35">var _wau = _wau || []; _wau.push(["small", "p1hcja6m8u", "a35"]);</script><script async src="//waust.at/s.js"></script>
+    
+    <title>Reproductor - Fútbol Libre TV</title>
+
+
+</head>
+
+<body>
+    <header class="d-flex justify-content-between bg-white border-bottom box-shadow">
+        <a class="font-weight-normal" rel="home" href="/">
+            <img src="/img/logo-futbolLibre.webp" alt="Logo de Fútbol Libre TV" width="30" height="30">
+        </a>
+
+        <a class="btn btn-outline-fl py-3" rel="home" href="/">
+            Regresar al inicio
+        </a>
+    </header>
+    <div class="new-container">
+        
+        <!-- publicidd mobil superior iframe -->
+        <div class="publicidad-mobile" style="height: 100%;">
+            <a href="https://record.betsson.com/_6q0Q_fZyrmmiQ99F8qzC3mNd7ZgqdRLk/1/" target="_blank" rel="noopener"><img
+                    decoding="async" src="https://casasdeapuesta.pe/betsson50.webp" alt="" class="wp-image-785" style="
+                    height: inherit;
+                " /></a>
+        <!-- publicidd mobil superior iframe -->
+        
+        </div>
+        
+        
+        <div class="reproductor-container">
+            <div class="reproductor ">
+                <script type="text/javascript">
+                    if (embed) { document.write('<iframe style="aspect-ratio: 16/9;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen src="' + atob(embed) + '" scrolling="no" height="90%" width="100%" frameBorder="0" allowfullscreen></iframe>'); }
+                </script>
+                <button type="button" class="btn btn-lg btn-block btn-fl" onclick="location.reload()" />Recargar
+                reproductor</button>
+                
+         </div>
+            
+            
+            <div class="publicidad-derecha">
+                
+                <!-- publicidd pc derecha -->
+                
+                <a href="https://record.betsson.com/_6q0Q_fZyrmmiQ99F8qzC3mNd7ZgqdRLk/1/" target="_blank"
+                    rel="noopener"><img src="https://casasdeapuesta.pe/50betsson2.webp" border="0"
+                        style="width:100%;padding-bottom: 1rem;" /></a>
+                        
+                        <a href="https://gml-grp.com/C.ashx?btag=a_20354b_1877c_&affid=6512&siteid=20354&adid=1877&c=" target="_blank"
+                    rel="noopener"><img src="https://casasdeapuesta.pe/betano_derecha.gif" border="0"
+                        style="width:100%;padding-bottom: 1rem;" /></a>
+                        
+                <a href="https://record.inkabet.pe/_I-N_eAHiKa2ZeUTRp6MYx2Nd7ZgqdRLk/1/" target="_blank"
+                    rel="noopener"><img src="https://casasdeapuesta.pe/400inkabet.webp" style="width:100%"
+                        border="0" /></a>
+                        
+                <!-- publicidd pc derecha -->
+                        
+            </div>
+            
+        </div>
+        
+        <div class="publicidad-mobile" style="height: 100%;">
+            
+            <!-- publicidd movil inferior iframe -->
+            <a href="https://record.inkabet.pe/_I-N_eAHiKa2ZeUTRp6MYx2Nd7ZgqdRLk/1/" target="_blank" rel="noopener"><img
+                    decoding="async"
+                    src="https://media.inkabet.pe/media/202312061535_0412-Afiliados-BannerBonoDeBienvenida_728x90.png"
+                    alt="" class="wp-image-785" style="
+                    height: inherit;
+                " /></a>
+        </div>
+        
+       
+         <div class="publicidad-mobile" style="height: 100%;">
+          
+                
+                    <a href="https://gml-grp.com/C.ashx?btag=a_20354b_2462c_&affid=6512&siteid=20354&adid=2462&c=" target="_blank" rel="noopener"><img
+                    decoding="async"
+                    src="https://casasdeapuesta.pe/betanoperu.webp"
+                    alt="" class="wp-image-785" style="
+                    height: inherit;
+                " /></a>
+                
+                <br>
+                
+                <center><script src="https://cdn.bannerflow.com/bf-placements/659fb0aeed0805145045c755?targetwindow=_blank&targeturl=https://record.betsafe.com/_6q0Q_fZyrmkImdLOC9GB25Ddtz1L3Tbq/1/&media=203677&campaign=1" async></script></center>
+        </div> 
+        
+        <br>
+    </div> 
+     <!-- publicidd fin -->     
+            
+
+        <footer class="container" class=" my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-6 col-md">
+                    <h5>Social</h5>
+
+ <a href="https://t.me/+eVYMuUgvSpBjOGU5" target="_blank">
+        <button class="boton-telegram">Unete al grupo de Telegram</button>
+    </a>
+
+                </div>
+                <div class="col-6 col-md">
+                    <h5>Fútbol Libre</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="/DMCA.html">DMCA</a></li>
+                    </ul>
+                    <div style="text-rigth:center;">
+                        <small class="d-block mb-3 text-muted">Fútbol Libre TV 2024 &copy; Todos los derechos
+                            reservados.</small>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+
+<!-- Botón de Telegram -->
+ <a href="https://t.me/+JNsT66R26VdkMzFh" target="_blank" id="telegram-button">
+    Grupo de Apuestas
+    <span id="close-button">×</span> <!-- Botón de cierre -->
+  </a>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.getElementById('close-button').addEventListener('click', function(e) {
+        e.preventDefault(); // Previene la navegación si 'close-button' está dentro de 'a href'
+        document.getElementById('telegram-button').style.display = 'none';
+      });
+    });
+  </script>
+<!-- Botón de Telegram --> 
+
+</body>
+
+</html>
