@@ -1,125 +1,43 @@
 <!DOCTYPE html>
-<html lang="es-PE">
-
+<html lang="en">
 <head>
-    <script type="text/javascript" src="https://librefutboltv.net/z-4834911"></script>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex" />
-    <meta name="referrer" content="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega Font Awesome -->
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Estilos para las flechas */
-        .arrow {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-            display: none; /* Ocultar las flechas por defecto */
-        }
-
-        #prevPlayerButton {
-            left: 10px;
-        }
-
-        #nextPlayerButton {
-            right: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproductor de Video en Vivo</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #videoPlayer {
+        width: 640px;
+        height: 360px;
+        margin: 0 auto;
+    }
+</style>
 </head>
-
 <body>
-    <script type="text/javascript">
-        function getParameterByName(name) {
-            name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-            var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-                results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+<div id="videoPlayer">
+    <video controls autoplay>
+        <source src="https://dai.google.com/linear/hls/pa/event/bFL1IVq9RNGlWQaqgiFuNw/stream/a46c541a-8c64-4da1-981e-caeab3e0fbd5:SCL/variant/6111ad30657a583ad044dfe707c7e95d/bandwidth/2305600.m3u8" type="application/x-mpegURL">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    // Lógica para cambiar de video con las flechas del teclado
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowRight") {
+            // Lógica para cargar el siguiente video en vivo
+            // Esto dependerá de tu fuente de videos en vivo y cómo estés manejando las transmisiones
+            // Podrías cambiar la fuente del reproductor de video o usar alguna API para obtener la URL del siguiente video en vivo
+            console.log("Cargar siguiente video en vivo");
+        } else if (event.key === "ArrowLeft") {
+            // Lógica para cargar el video anterior en vivo
+            // Similar al caso anterior, depende de cómo estés manejando las transmisiones en vivo
+            console.log("Cargar video anterior en vivo");
         }
-
-        var getURL = "https://live-ftc-na-south-2.media.starott.com/gru1/qb01/starplus/event/2024/05/27/Unin_de_Santa_Fe_vs_Barra_20240527_1716840953029/ctr-all-complete.m3u8";
-        var getKEY = "c76196cdd9e144028d44c6c217efaae5";
-        var getKEY2 = "94d367cda30f9ca0bf6e809a0b0fdc12";
-        if (getURL == "#") {
-            alert('Vuelve a la página anterior');
-        }
-
-        var mt = ["live-ftc-na-south-2", "live-ftc-sa-east-2", "live-ftc-sa-east-1"]
-        var random = Math.floor(Math.random() * mt.length)
-        getURL = getURL.replace("live-ftc-na-south-2", mt[random]);
-    </script>
-
-    <script src='https://content.jwplatform.com/libraries/KB5zFt7A.js'></script>
-    <script>
-        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-    </script>
-
-    <div id="player"></div>
-
-    <!-- Agrega las flechas -->
-    <div id="prevPlayerButton" class="arrow"><i class="fas fa-chevron-left"></i></div>
-    <div id="nextPlayerButton" class="arrow"><i class="fas fa-chevron-right"></i></div>
-
-    <script type="text/javascript">
-        var playerInstance = jwplayer("player");
-
-        playerInstance.setup({
-            playlist: [{
-                "sources": [{
-                    "default": false,
-                    "type": "dash",
-                    "file": getURL,
-                    "drm": {
-                        "clearkey": {
-                            "keyId": getKEY,
-                            "key": getKEY2
-                        }
-                    },
-                    "label": "0"
-                }]
-            }],
-            width: "100%",
-            height: "100%",
-            aspectratio: "16:9",
-            autostart: true,
-            cast: {},
-            sharing: {}
-        });
-
-        // Función para mostrar las flechas cuando se mueve el mouse
-        document.addEventListener('mousemove', function (event) {
-            var prevButton = document.getElementById('prevPlayerButton');
-            var nextButton = document.getElementById('nextPlayerButton');
-
-            // Muestra las flechas cuando el mouse está cerca de los bordes laterales de la pantalla
-            if (event.clientX < 50) {
-                prevButton.style.display = 'block';
-            } else {
-                prevButton.style.display = 'none';
-            }
-
-            if (event.clientX > window.innerWidth - 50) {
-                nextButton.style.display = 'block';
-            } else {
-                nextButton.style.display = 'none';
-            }
-        });
-
-        // Redirecciona al siguiente reproductor al hacer clic en la flecha derecha
-        document.getElementById('nextPlayerButton').addEventListener('click', function () {
-            window.location.href = "index.html";
-        });
-
-        // Redirecciona al reproductor anterior al hacer clic en la flecha izquierda
-        document.getElementById('prevPlayerButton').addEventListener('click', function () {
-            // Implementa la lógica para ir al reproductor anterior si es necesario
-        });
-    </script>
+    });
+</script>
 </body>
-
 </html>
