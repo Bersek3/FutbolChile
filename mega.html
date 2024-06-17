@@ -1,111 +1,22 @@
-<!DOCTYPE html>
-<html lang="es-PE">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="robots" content="noindex" />
-    <meta name="referrer" content="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega Font Awesome -->
-    <style type="text/css">
-        body {
-            margin: 0;
-            padding: 0;
-        }
+<!----ADS---->
 
-        /* Estilos para las flechas */
-        .arrow {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            cursor: pointer;
-            display: none; /* Ocultar las flechas por defecto */
-        }
 
-        #prevPlayerButton {
-            left: 10px;
-        }
+<script>fid="tntchilehd"; v_width="100%"; v_height="100%";</script><script type="text/javascript" src="//focus4ca.com/deportivo.js"></script> 
 
-        #nextPlayerButton {
-            right: 10px;
-        }
-    </style>
-</head>
+<!---ADS---->
 
-<body>
-    <script src='https://content.jwplatform.com/libraries/KB5zFt7A.js'></script>
-    <script>
-        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-    </script>
+<!-- ads-->
+<script type='text/javascript' src='//pl14330559.highrevenuenetwork.com/ac/58/bb/ac58bbe800329453de3d4b2f28050b55.js'></script>
 
-    <div id="player"></div>
+<!-- ads-->
 
-    <!-- Agrega las flechas -->
-    <div id="prevPlayerButton" class="arrow"><i class="fas fa-chevron-left"></i></div>
-    <div id="nextPlayerButton" class="arrow"><i class="fas fa-chevron-right"></i></div>
+<!-- adcash-->
+<script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 
-    <script type="text/javascript">
-        var playerInstance = jwplayer("player");
-
-        playerInstance.setup({
-            playlist: [{
-                "sources": [{
-                    "default": false,
-                    "type": "hls",
-                    "file": "https://us-b4-p-e-ja16.cdn.mdstrm.com/live-stream-dai/13cc1f176f26445cb52acfdd821e5e79/manifest/f624fec49dadc88894ebeff1d974eab019af7757/5346f657c1e6f5810b5b9df3/0a42ecc8-b0b3-4659-a2d7-65d3a128f648/0.m3u8?aid=51c2f628b440bd797900051f&WebM3UCL=&pid=RflCym4qOjw75QDxzcRuOwybei9e8P3S&sid=2omYpp7oTHKm08w0MhVlueorVFJjSrRU&uid=4yDjE3pmkq44WUfGg61rjEfCAm5IW9OS&es=cl-a2-i-e-cl1.cdn.mdstrm.com&ote=1717836092712&ot=12h7tcz-0ULjRdsyvfXlAw&proto=https&pz=cl"
-                }]
-            }],
-            width: "100%",
-            height: "100%",
-            aspectratio: "16:9",
-            autostart: true,
-            cast: {},
-            sharing: {}
-        });
-
-        // Lógica para cambiar de video con las flechas del teclado
-        document.addEventListener("keydown", function(event) {
-            if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
-                if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
-                    if (event.key === "ArrowRight") {
-                        window.location.href = "starplus.html"; // Redirige al siguiente reproductor
-                    } else if (event.key === "ArrowLeft") {
-                        window.location.href = "index.html"; // Redirige al reproductor anterior
-                    }
-                    event.preventDefault(); // Evita que se realice la acción predeterminada del navegador (salir del modo de pantalla completa)
-                }
-            }
-        });
-
-        // Función para mostrar las flechas cuando se mueve el mouse
-        document.addEventListener('mousemove', function (event) {
-            var prevButton = document.getElementById('prevPlayerButton');
-            var nextButton = document.getElementById('nextPlayerButton');
-
-            // Muestra las flechas cuando el mouse está cerca de los bordes laterales de la pantalla
-            if (event.clientX < 50) {
-                prevButton.style.display = 'block';
-            } else {
-                prevButton.style.display = 'none';
-            }
-
-            if (event.clientX > window.innerWidth - 50) {
-                nextButton.style.display = 'block';
-            } else {
-                nextButton.style.display = 'none';
-            }
-        });
-
-        // Redirecciona al siguiente reproductor al hacer clic en la flecha derecha
-        document.getElementById('nextPlayerButton').addEventListener('click', function () {
-            window.location.href = "starplus.html";
-        });
-
-        // Redirecciona al reproductor anterior al hacer clic en la flecha izquierda
-        document.getElementById('prevPlayerButton').addEventListener('click', function () {
-            window.location.href = "index.html"; // Cambia "index.html" al enlace del reproductor anterior
-        });
-    </script>
-</body>
-
-</html>
+<script type="text/javascript">
+    aclib.runPop({
+        zoneId: '4681243',
+    });
+</script>
+<!-- adcash-->
